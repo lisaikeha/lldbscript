@@ -11,4 +11,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'lisaike.py', fingerprint: true
+        }
+    }
 }
